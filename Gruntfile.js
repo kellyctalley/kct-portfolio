@@ -40,6 +40,7 @@ module.exports = function(grunt) {
                     './app/images/*.{png,jpg,jpeg}',
                     './app/scripts/**/*.js',
                     './app/sass/**/*.scss',
+                    './app/sass/**/*.css',
                     './app/pages/**/*.html',
                     './app/templates/**/*.html',
                     'Gruntfile.js'
@@ -74,6 +75,11 @@ module.exports = function(grunt) {
                     src: [ './**/*.html' ],
                     dest: './dist/templates',
                     cwd: './app/templates'
+                }, {
+                    expand: true,
+                    src: [ './**/*.css' ],
+                    dest: './dist/css',
+                    cwd: './app/sass'
                 }, {
                   expand: true,
                   src: [ './**/*.js' ],
