@@ -1,18 +1,23 @@
 $dark-aqua: #488a99;
 $gold: #dbae58;
-$charcoal: #fbe9e7;
+$charcoal: #4B585C;
 $gray: #b4b4b4;
 $light-gray: #f1f0f1;
+$lato: Lato,"Helvetica Neue",Helvetica,Arial,sans-serif;
+$merriweather: "Merriweather", Georgia, serif;
 
 body {
     overflow-x: hidden;
 
     p {
-        font-size: 20px;
-        font-weight: 400;
+        font-size: 18px;
+        font-weight: 300;
+        font-family: $merriweather;
+        -webkit-font-smoothing: antialiased;
+
 
         &.small {
-            font-size: 16px;
+            font-size: 14px;
         }
     }
 
@@ -21,14 +26,9 @@ body {
         color: #fff;
     }
 
-    h1, h2, h3, h4, h5, h6, p {
-        font-family: Lato,"Helvetica Neue",Helvetica,Arial,sans-serif;
-        -webkit-font-smoothing: antialiased;
-    }
-
     h1, h2, h3, h4, h5, h6 {
-        text-transform: uppercase;
-        font-weight: 300;
+        font-family: $lato;
+        -webkit-font-smoothing: antialiased;
     }
 
     .img-centered {
@@ -54,14 +54,11 @@ body {
 
 header {
     text-align: center;
-    color: #fff;
-    background: $gold;
-    font-family: Lato,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    color: $charcoal;
+    background: #fff;
 
     .container {
-        position: absolute;
-        top: 28%;
-        width: 100%;
+        padding: 100px 0 75px;
     }
 
     img {
@@ -73,14 +70,14 @@ header {
 
         .name {
             display: block;
-            text-transform: uppercase;
+            font-family: $lato;
+            font-weight: 300;
             font-size: 5em;
-            font-weight: 900;
-            letter-spacing: 2px;
+            letter-spacing: -1px;
         }
 
         .skills {
-            font-size: 1.75em;
+            font-size: 1.25em;
             font-weight: 300;
         }
 
@@ -88,7 +85,7 @@ header {
             font-size: 4em;
         }
     }
-
+    
     .spin {
         margin: 0 auto;
         -webkit-animation-name: spinnerRotate;
@@ -129,15 +126,16 @@ header {
     font-family: Lato,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 700;
     background-color: transparent;
-    color: #fff !important;
+    color: $charcoal !important;
 }
 
 .navbar-nav a {
-    color: #fff !important;
+    color: $charcoal !important;
 }
 
 .navbar-nav li a:hover {
     color: #2f2f28 !important;
+    border-bottom: 1px solid $charcoal;
 }
 
 .navbar-shrink {
@@ -166,13 +164,14 @@ header {
 }
 
 .navbar-brand {
-    color: #fff !important;
+    color: $charcoal !important;
     text-transform: lowercase;
     font-weight: 300;
 }
 
 section {
     padding: 100px 0;
+    color: $charcoal;
 }
 
 section h2 {
@@ -211,30 +210,33 @@ section h2 {
     width: 100%;
     height: 100%;
     opacity: 0;
-    background: rgba(104, 139, 138, 0.75);
+    background: $charcoal;
     -webkit-transition: all ease .5s;
     -moz-transition: all ease .5s;
     transition: all ease .5s;
 }
 
 #portfolio .portfolio-item .portfolio-link .caption:hover {
-    opacity: 1;
+    opacity: 0.8;
 }
 
 #portfolio .portfolio-item .portfolio-link .caption .caption-content {
     position: absolute;
-    top: 50%;
+    top: 45%;
     width: 100%;
     height: 20px;
     margin-top: -12px;
     text-align: center;
     font-size: 20px;
     color: #fff;
-}
 
-#portfolio .portfolio-item .portfolio-link .caption .caption-content h3,
-#portfolio .portfolio-item .portfolio-link .caption .caption-content h4 {
-    margin: 0;
+    h3, h4 {
+        margin: 0;
+    }
+
+    hr {
+        width: 50%;
+    }
 }
 
 .section-header {
@@ -252,24 +254,32 @@ section h2 {
 }
 
 .about-me {
-    color: #fff;
-    background-color: $dark-aqua;
+    background-color: #fff;
+
+    a, a:hover, a:focus, a:active, a.active {
+        color: $dark-aqua;
+    }
 }
 
 .contact-me {
     background-color: $light-gray;
+    font-family: $lato;
+
+    a, a:hover, a:focus, a:active, a.active {
+        color: $dark-aqua;
+    }
 }
 
 .my-services {
-    color: #fff;
-    background-color: $gray;
+    background-color: #fff;
+    padding-top: 0px;
 }
 
 .btn-outline {
     margin-top: 15px;
-    border: solid 2px #fff;
+    border: solid 2px $dark-aqua;
     font-size: 20px;
-    color: #fff;
+    color: $dark-aqua;
     background: 0 0;
     transition: all .3s ease-in-out;
 }
@@ -279,7 +289,7 @@ section h2 {
 .btn-outline:active,
 .btn-outline.active {
     border: solid 2px #fff;
-    color: #18bc9c;
+    color: $charcoal;
     background: #fff;
 }
 
@@ -347,18 +357,9 @@ footer h3 {
     margin-bottom: 30px;
 }
 
-footer .footer-above {
-    padding-top: 50px;
-    background-color: #dbae58;
-}
-
-footer .footer-col {
-    margin-bottom: 50px;
-}
-
 footer .footer-below {
     padding: 25px 0;
-    background-color: #488a99;
+    background-color: $dark-aqua;
 }
 
 .btn-social {
@@ -408,10 +409,11 @@ footer .footer-below {
     background-clip: border-box;
     -webkit-box-shadow: none;
     box-shadow: none;
+    color: $charcoal;
 }
 
 .portfolio-modal .modal-content h2 {
-    margin: 0;
+    margin: 0 0 10px 0;
     font-size: 3em;
 }
 

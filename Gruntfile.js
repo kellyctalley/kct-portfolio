@@ -41,6 +41,7 @@ module.exports = function(grunt) {
                     './app/scripts/**/*.js',
                     './app/sass/**/*.scss',
                     './app/sass/**/*.css',
+                    './app/mail/**/*.php',
                     './app/pages/**/*.html',
                     './app/templates/**/*.html',
                     'Gruntfile.js'
@@ -80,6 +81,11 @@ module.exports = function(grunt) {
                     src: [ './**/*.css' ],
                     dest: './dist/css',
                     cwd: './app/sass'
+                }, {
+                    expand: true,
+                    src: [ './**/*.php' ],
+                    dest: './dist/mail',
+                    cwd: './app/mail'
                 }, {
                   expand: true,
                   src: [ './**/*.js' ],
