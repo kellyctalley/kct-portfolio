@@ -1,5 +1,7 @@
 var Hapi = require('hapi'),
     path = require('path'),
+    mailer = require('nodemailer'),
+    config = require('./mailerconfig'),
     port = process.env.PORT || 3000,
     server = new Hapi.Server(port),
     routes = {
@@ -23,6 +25,18 @@ var Hapi = require('hapi'),
             path: '/templates/{path*}',
             handler: createDirectoryRoute('templates')
         },
+        contact: {
+            method: 'POST',
+            path: '/contact',
+            handler: function (request, reply) {
+                var name = request.payload.name,
+                    email = request.payload.email,
+                    message = request.payload.message;
+
+                // do stuff that the site says  
+                transporter.sendMail();
+            }
+        },
         spa: {
             method: 'GET',
             path: '/{path*}',
@@ -32,7 +46,11 @@ var Hapi = require('hapi'),
         }
     };
 
-server.route([ routes.css, routes.js, routes.images, routes.templates, routes.spa ]);
+// mailerconfig.username
+// mailerconfig.password
+var transporter = {};
+
+server.route([ routes.css, routes.js, routes.images, routes.templates, routes.contact, routes.spa ]);
 server.start( onServerStarted );
 
 function onServerStarted() {
