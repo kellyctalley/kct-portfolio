@@ -34,7 +34,13 @@ var Hapi = require('hapi'),
                     message = request.payload.message;
 
                 // do stuff that the site says  
-                transporter.sendMail();
+                transporter.sendMail(mailOptions, function (error, info) {
+                    if (error) {
+                        console.log(error);
+                    } else {
+                        console.log('Message sent: ' + info.response);
+                    }
+                });
             }
         },
         spa: {
@@ -48,7 +54,28 @@ var Hapi = require('hapi'),
 
 // mailerconfig.username
 // mailerconfig.password
-var transporter = {};
+
+//Require the module
+var nodemailer = require('nodemailer');
+ 
+//Create the reusable transport
+var transporter = nodemailer.createTransport({
+    service: 'Gmail',
+    auth: {
+        user: 'mailerconfig.user',
+        pass: 'mailerconfig.pass'
+    }
+});
+
+var mailOptions = {
+    from: 'Fred Foo <foo@blurdybloop.com>', // sender address
+    to: 'bar@blurdybloop.com, baz@blurdybloop.com', // list of receivers
+    subject: 'Hello', // Subject line
+    text: req.body["message"] + ' You may contact this sender at: ' + req.body["email"]
+};
+
+
+
 
 server.route([ routes.css, routes.js, routes.images, routes.templates, routes.contact, routes.spa ]);
 server.start( onServerStarted );

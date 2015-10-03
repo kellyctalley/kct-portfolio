@@ -20,7 +20,7 @@
 
     <!-- Custom Fonts -->
     <link href='https://fonts.googleapis.com/css?family=Lato:400,900,700,400italic,300italic,300,700italic' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,700,900,300' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -147,6 +147,30 @@
                         <img src="images/images/WCM-thumbnail.jpg" class="img-responsive" alt="">
                     </a>
                 </div>
+                <div class="col-sm-4 portfolio-item">
+                    <a href="#blocjams" class="portfolio-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <h3>Bloc Jams</h3>
+                                <hr>
+                                <p>coding, design</p>
+                            </div>
+                        </div>
+                        <img src="images/images/blocjams-thumbnail.jpg" class="img-responsive" alt="">
+                    </a>
+                </div>
+                <div class="col-sm-4 portfolio-item">
+                    <a href="#memory" class="portfolio-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <h3>Memory Game</h3>
+                                <hr>
+                                <p>coding, design</p>
+                            </div>
+                        </div>
+                        <img src="images/images/flower-pairs-thumbnail.jpg" class="img-responsive" alt="">
+                    </a>
+                </div>
             </div>
         </div>
     </section>
@@ -165,7 +189,7 @@
                 </div>
                 <div class="col-lg-9">
                     <p>Hello, there! I'm Kelly Talley, a freelance graphic designer and web developer based in Birmingham, Alabama. I specialize in design and digital products for individuals and small businesses. I have over a decade of design experience, and I am passionate about designing creative and effective products.</p>
-                    <p>When I'm not creating fabulous digital and print designs, I'm often creating something delicious in my kitchen or something warm and fuzzy with my knitting needles. Or maybe I'm outside on the trail in my hiking boots on on my bike.</p>
+                    <p>When I'm not creating fabulous digital and print designs, I'm often creating something delicious in my kitchen or something warm and fuzzy with my knitting needles. Or maybe I'm outside on the trail in my hiking boots or on my bike.</p>
                     <p>If you have a project you'd like me to work on, or if you just want to say hello, I'd love to hear from you! Feel free to fill out the <span class="page-scroll"><a href="#contact">contact form</a></span> below or email me at <a href="mailto:kelly.c.talley@gmail.com">kelly.c.talley@gmail.com</a>.</p>
                 </div>
             </div>
@@ -220,33 +244,32 @@
                         <p>Use the form to the right or email me directly at <a href="mailto:kelly.c.talley@gmail.com">kelly.c.talley@gmail.com</a>.</p>
                 </div>
                 <div class="col-lg-8">
-                    <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
-                    <!-- The form should work on most web servers, but if the form is not working you may need to configure your web server differently. -->
                     <form name="sentMessage" id="contactForm" novalidate>
                         <div class="row control-group">
                             <div class="form-group col-xs-12 floating-label-form-group controls">
                                 <label>Name</label>
-                                <input type="text" class="form-control" placeholder="Name" id="name">
+                                <input type="text" class="form-control" placeholder="Name" id="name" name="name">
                             </div>
                         </div>
                         <div class="row control-group">
                             <div class="form-group col-xs-12 floating-label-form-group controls">
                                 <label>Email Address</label>
-                                <input type="email" class="form-control" placeholder="Email Address" id="email">
+                                <input type="email" class="form-control" placeholder="Email Address" id="email" name="email">
                             </div>
                         </div>
                         <div class="row control-group">
                             <div class="form-group col-xs-12 floating-label-form-group controls">
                                 <label>Message</label>
-                                <textarea rows="5" class="form-control" placeholder="Message" id="message"></textarea>
+                                <textarea rows="5" class="form-control" placeholder="Message" id="message" name="message"></textarea>
                             </div>
                         </div>
                         <br>
                         <div id="success"></div>
                         <div class="row">
                             <div class="form-group col-xs-12">
-                                <button type="submit" class="btn btn-warning btn-lg">Send</button>
+                                <button type="submit" id="contact-form-submit" name="contact-form-submit" class="button btn btn-warning btn-lg">Send</button>
                             </div>
+                            <h5 id="submitResponse"></h5>
                         </div>
                     </form>
                 </div>
@@ -312,7 +335,7 @@
                     <div class="col-lg-8 col-lg-offset-2">
                         <div class="modal-body">
                             <h2>First Presbyterian Church</h2>
-                            <p>Website and logo created for First Presbyterian Church in Eufaula, Alabama. This small-town church needed a website with an updated look. The logo design is inspired by one of the many stained-glass windows in the church's sanctuary.</p>
+                            <p>Logo and WordPress website and created for First Presbyterian Church in Eufaula, Alabama. This small-town church needed a website with an updated look. The logo design is inspired by one of the many stained-glass windows in the church's sanctuary. View the full site at <a href="http://firstpresbyterianeufaula.com/">firstpresbyterianeufaula.com</a>.</p>
                             <img src="/images/images/FPE_web_logo.jpg" class="img-responsive img-centered" alt="">
                             <hr>
                             <img src="/images/images/FPE-site-full.jpg" class="img-responsive img-centered" alt="">
@@ -337,7 +360,7 @@
                     <div class="col-lg-8 col-lg-offset-2">
                         <div class="modal-body">
                             <h2>Pomodoro Timer</h2>
-                            <p>This timer was built using AngularJS and Firebase. It uses the Pomodoro method.</p>
+                            <p>Timer project built using AngularJS and Firebase. It uses the Pomodoro method, with a 25-minute timer and 5 minute breaks in between pomodoros. View the full app <a href="https://radiant-heat-6289.firebaseapp.com/">here.</a></p>
                             <img src="/images/images/pomodoro-full.jpg" class="img-responsive img-centered" alt="">
                             <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
                         </div>
@@ -347,7 +370,7 @@
         </div>
     </div>
 
-    <div class="portfolio-modal modal fade" id="wcm" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="portfolio-modal modal fade" id="blocjams" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-content">
             <div class="close-modal" data-dismiss="modal">
                 <div class="lr">
@@ -359,10 +382,34 @@
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
                         <div class="modal-body">
-                            <h2>Walkin' Cane Mark</h2>
-                            <p>Prosciutto magna aliquip eu salami tempor, lorem strip steak short ribs frankfurter irure. Voluptate sunt bresaola lorem, aliqua culpa venison. Adipisicing salami nulla hamburger pork belly shank reprehenderit exercitation proident, laboris cupidatat. Tempor tail pork cillum do venison jerky veniam deserunt. Cupim aute picanha rump culpa.</p>
-                            <img src="/images/images/WCM-home-page.jpg" class="img-responsive img-centered" alt="">
-                            <img src="/images/images/WCM-cd-case.jpg" class="img-responsive img-centered" alt="">
+                            <h2>Bloc Jams</h2>
+                            <p>The Bloc Jams page was the inital project for the Bloc apprenticeship. The program is built using AngularJS, and I later added new art and a mobile responsive design. View the full page <a href="https://bloc-jams-mobile-2358.herokuapp.com/">here.</a></p>
+                            <img src="/images/images/blocjams_full.jpg" class="img-responsive img-centered" alt="">
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="portfolio-modal modal fade" id="memory" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>Memory Game</h2>
+                            <p>The Flower Pairs memory game was built for the Bloc apprenticeship as a jQuery exercise. View the full page <a href="http://flower-pairs-4873.herokuapp.com/">here.</a></p>
+                            <img src="/images/images/flower-pairs1.jpg" class="img-responsive img-centered" alt="">
+                            <img src="/images/images/flower-pairs2.jpg" class="img-responsive img-centered" alt="">
+                            <img src="/images/images/flower-pairs3.jpg" class="img-responsive img-centered" alt="">
                             <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
                         </div>
                     </div>
@@ -378,6 +425,7 @@
     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
     <script src="/js/classie.js"></script>
     <script src="/js/cbpAnimatedHeader.js"></script>
+    <script src="/js/contact.js"></script>
     <script src="/js/app.js"></script>
 
 </body>
