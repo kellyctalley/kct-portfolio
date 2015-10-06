@@ -6,7 +6,10 @@ $(document).ready(function() {
             url: '/contact',
             data: $("#contact-form").serialize(),
             success: function (response) {
-                $("#submitResponse").html(response);
+                $("#submit-response").html(response);
+            },
+            error: function (error) {
+                $("#submit-response").html(error);
             }
         });
     });

@@ -3,8 +3,8 @@ $gold: #dbae58;
 $charcoal: #4B585C;
 $gray: #b4b4b4;
 $light-gray: #f1f0f1;
-$lato: Lato,"Helvetica Neue",Helvetica,Arial,sans-serif;
-$merriweather: "Merriweather", Georgia, serif;
+$sans: Lato,"Helvetica Neue",Helvetica,Arial,sans-serif;
+$serif: "Merriweather", Georgia, serif;
 
 body {
     overflow-x: hidden;
@@ -12,7 +12,7 @@ body {
     p {
         font-size: 18px;
         font-weight: 300;
-        font-family: $merriweather;
+        font-family: $serif;
         -webkit-font-smoothing: antialiased;
 
 
@@ -28,7 +28,7 @@ body {
     }
 
     h1, h2, h3, h4, h5, h6 {
-        font-family: $lato;
+        font-family: $sans;
         -webkit-font-smoothing: antialiased;
     }
 
@@ -71,7 +71,7 @@ header {
 
         .name {
             display: block;
-            font-family: $lato;
+            font-family: $sans;
             font-weight: 300;
             font-size: 5em;
             letter-spacing: -1px;
@@ -124,7 +124,7 @@ header {
 
 .navbar {
     text-transform: uppercase;
-    font-family: Lato,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: $sans;
     font-weight: 700;
     background-color: transparent;
     color: $charcoal !important;
@@ -168,6 +168,11 @@ header {
     color: $charcoal !important;
     text-transform: lowercase;
     font-weight: 300;
+
+    &:hover, &:focus, &:active, &.active {
+        outline: 0;
+        font-weight: 300;
+    }
 }
 
 section {
@@ -266,7 +271,7 @@ section h2 {
 
 .contact-me {
     background-color: $light-gray;
-    font-family: $lato;
+    font-family: $sans;
 
     a, a:hover, a:focus, a:active, a.active {
         color: $dark-aqua;
@@ -354,6 +359,11 @@ form .row:first-child .floating-label-form-group {
 
 footer {
     color: #fff;
+
+    a, a:hover, a:focus, a:active, a.active {
+        color: #fff;
+        font-weight: 300;
+    }
 }
 
 footer h3 {

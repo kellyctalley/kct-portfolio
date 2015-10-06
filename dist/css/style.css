@@ -109,6 +109,9 @@ header {
   color: #4B585C !important;
   text-transform: lowercase;
   font-weight: 300; }
+  .navbar-brand:hover, .navbar-brand:focus, .navbar-brand:active, .navbar-brand.active {
+    outline: 0;
+    font-weight: 300; }
 
 section {
   padding: 100px 0;
@@ -252,6 +255,9 @@ form .row:first-child .floating-label-form-group {
 
 footer {
   color: #fff; }
+  footer a, footer a:hover, footer a:focus, footer a:active, footer a.active {
+    color: #fff;
+    font-weight: 300; }
 
 footer h3 {
   margin-bottom: 30px; }

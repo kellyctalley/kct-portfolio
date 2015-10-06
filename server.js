@@ -1,6 +1,6 @@
 var Hapi = require('hapi'),
     path = require('path'),
-    mailer = require('nodemailer'),
+    nodemailer = require('nodemailer'),
     config = require('./mailerconfig'),
     port = process.env.PORT || 3000,
     server = new Hapi.Server(port),
@@ -33,14 +33,32 @@ var Hapi = require('hapi'),
                     email = request.payload.email,
                     message = request.payload.message;
 
-                // do stuff that the site says  
+                // do stuff that the site says
+                var transporter = nodemailer.createTransport({
+                    service: 'Gmail',
+                    auth: {
+                        user: config.user,
+                        pass: config.pass
+                    }
+                });
+
+                var mailOptions = {
+                    from: 'Contact Me <kelly.c.talley@gmail.com>', // sender address
+                    to: 'kelly.c.talley@gmail.com', // list of receivers
+                    replyTo: name + ' <' + email + '>',
+                    subject: '[Contact Me] Hello', // Subject line
+                    text: message
+                };
+
                 transporter.sendMail(mailOptions, function (error, info) {
                     if (error) {
                         console.log(error);
+                        reply(error).code(500);
                     } else {
                         console.log('Message sent: ' + info.response);
+                        reply('Your message has been sent! Thanks!').code(200);
                     }
-                });
+                });  
             }
         },
         spa: {
@@ -52,27 +70,8 @@ var Hapi = require('hapi'),
         }
     };
 
-// mailerconfig.username
-// mailerconfig.password
+//transport
 
-//Require the module
-var nodemailer = require('nodemailer');
- 
-//Create the reusable transport
-var transporter = nodemailer.createTransport({
-    service: 'Gmail',
-    auth: {
-        user: 'mailerconfig.user',
-        pass: 'mailerconfig.pass'
-    }
-});
-
-var mailOptions = {
-    from: 'Fred Foo <foo@blurdybloop.com>', // sender address
-    to: 'bar@blurdybloop.com, baz@blurdybloop.com', // list of receivers
-    subject: 'Hello', // Subject line
-    text: req.body["message"] + ' You may contact this sender at: ' + req.body["email"]
-};
 
 
 

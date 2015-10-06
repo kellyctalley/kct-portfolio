@@ -21,6 +21,7 @@
     <!-- Custom Fonts -->
     <link href='https://fonts.googleapis.com/css?family=Lato:400,900,700,400italic,300italic,300,700italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Merriweather:400,700,900,300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Slabo+27px' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -79,7 +80,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="spin">
-                        <img class="img-responsive" src="http://i.imgur.com/3UrqFGp.png" width='15%' alt="">
+                        <img class="img-responsive" src="images/images/swirl-logo.png" width='15%' alt="">
                     </div>
                     <div class="intro-text">
                         <h1 class="name">kelly talley</h1>
@@ -199,23 +200,34 @@
     <!-- Services Section -->
     <section class="my-services" id="services">
         <div class="container">
-            <div class="row section-header">
-                <div class="col-lg-12">
-                    <h2>services</h2>
-                </div>
-            </div>
             <div class="row">
-                <div class="col-lg-4">
-                    <h3>WEB DESIGN</h4>
-                    <p>Paragraph about web design.</p>
+                <div class="col-lg-6">
+                    <h2 class="section-header">services</h2>
+                    <p>Web Design and Development</p>
+                    <p>Mobile Design</p>
+                    <p>Print Design</p>
+                    <p>Logo Design</p>
+                    <p>Branding and Marketing Packages</p>
                 </div>
-                <div class="col-lg-4">
-                    <h3>PRINT DESIGN</h4>
-                    <p>Paragraph about print design.</p>
-                </div>
-                <div class="col-lg-4">
-                    <h3>WEB DEVELOPMENT</h4>
-                    <p>Paragraph about web dev.</p>
+                <div class="col-lg-6">
+                    <h2 class="section-header">skills</h2>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <p>HTML</p>
+                            <p>CSS/Sass</p>
+                            <p>JavaScript</p>
+                            <p>jQuery</p>
+                            <p>AngularJS</p>
+                            <p>WordPress</p>
+                        </div>
+                        <div class="col-lg-6">
+                            <p>InDesign</p>
+                            <p>Photoshop</p>
+                            <p>Illustrator</p>
+                            <p>Branding/Marketing</p>
+                            <p>Copywriting</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -244,7 +256,7 @@
                         <p>Use the form to the right or email me directly at <a href="mailto:kelly.c.talley@gmail.com">kelly.c.talley@gmail.com</a>.</p>
                 </div>
                 <div class="col-lg-8">
-                    <form name="sentMessage" id="contactForm" novalidate>
+                    <form name="contact-form" id="contact-form" novalidate>
                         <div class="row control-group">
                             <div class="form-group col-xs-12 floating-label-form-group controls">
                                 <label>Name</label>
@@ -267,9 +279,9 @@
                         <div id="success"></div>
                         <div class="row">
                             <div class="form-group col-xs-12">
-                                <button type="submit" id="contact-form-submit" name="contact-form-submit" class="button btn btn-warning btn-lg">Send</button>
+                                <input type="submit" id="contact-form-submit" name="contact-form-submit" class="button btn btn-warning btn-lg" value="Submit"/>
                             </div>
-                            <h5 id="submitResponse"></h5>
+                            <p id="submit-response"></p>
                         </div>
                     </form>
                 </div>
