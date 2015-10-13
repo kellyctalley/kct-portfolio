@@ -63,11 +63,9 @@ header {
 @media (min-width: 768px) {
   .navbar-fixed-top {
     padding: 25px 0;
-    -webkit-transition: padding 0.3s;
     transition: padding 0.3s; }
   .navbar-fixed-top .navbar-brand {
     font-size: 2em;
-    -webkit-transition: all 0.3s;
     transition: all 0.3s; }
   .navbar-fixed-top.navbar-shrink {
     padding: 10px 0; }
@@ -148,7 +146,6 @@ section h2 {
   height: 100%;
   opacity: 0;
   background: #4B585C;
-  -webkit-transition: all ease 0.5s;
   transition: all ease 0.5s; }
 
 #portfolio .portfolio-item .portfolio-link .caption:hover {
@@ -192,6 +189,10 @@ section h2 {
 .my-services {
   background-color: #fff;
   padding-top: 60px; }
+  .my-services .skills-row p {
+    font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 1.5em;
+    line-height: 1.25em; }
 
 .btn-outline {
   margin-top: 15px;
@@ -199,8 +200,7 @@ section h2 {
   font-size: 20px;
   color: #488a99;
   background: 0 0;
-  -webkit-transition: all 0.3s ease-in-out;
-          transition: all 0.3s ease-in-out; }
+  transition: all 0.3s ease-in-out; }
 
 .btn-outline:hover, .btn-outline:focus, .btn-outline:active, .btn-outline.active {
   border: solid 2px #fff;
@@ -236,7 +236,6 @@ section h2 {
   vertical-align: middle;
   vertical-align: baseline;
   opacity: 0;
-  -webkit-transition: top 0.3s ease, opacity 0.3s ease;
   transition: top 0.3s ease, opacity 0.3s ease; }
 
 .floating-label-form-group::not(:first-child) {

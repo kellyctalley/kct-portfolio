@@ -281,6 +281,12 @@ section h2 {
 .my-services {
     background-color: #fff;
     padding-top: 60px;
+
+    .skills-row p {
+        font-family: $sans;
+        font-size: 1.5em;
+        line-height: 1.25em;
+    }
 }
 
 .btn-outline {

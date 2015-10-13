@@ -43,10 +43,10 @@ var Hapi = require('hapi'),
                 });
 
                 var mailOptions = {
-                    from: 'Contact Me <kelly.c.talley@gmail.com>', // sender address
+                    from: 'Contact Form <kelly.c.talley@gmail.com>', // sender address
                     to: 'kelly.c.talley@gmail.com', // list of receivers
                     replyTo: name + ' <' + email + '>',
-                    subject: '[Contact Me] Hello', // Subject line
+                    subject: 'Message from' + name, // Subject line
                     text: message
                 };
 
