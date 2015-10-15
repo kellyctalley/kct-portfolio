@@ -52,6 +52,11 @@ body {
     from{-ms-transform:rotate(0deg);}
     to{-ms-transform:rotate(360deg);}
 }
+@keyframes spinnerRotate
+{
+    from{-ms-transform:rotate(0deg);}
+    to{-ms-transform:rotate(360deg);}
+}
 
 header {
     text-align: center;
@@ -95,6 +100,8 @@ header {
         -moz-animation-duration: 10s;
         -ms-animation-name: spinnerRotate;
         -ms-animation-duration: 10s;
+        animation-name: spinnerRotate;
+        animation-duration: 10s;
     }
 } 
 
