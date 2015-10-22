@@ -276,6 +276,12 @@ section h2 {
     a, a:hover, a:focus, a:active, a.active {
         color: $dark-aqua;
     }
+
+    #name-error, #email-error, #message-error {
+        color: #f00;
+        font-weight: bold;
+        padding-left: 5px;
+    }
 }
 
 .my-services {
@@ -318,7 +324,7 @@ section h2 {
 .floating-label-form-group textarea {
     z-index: 1;
     position: relative;
-    padding: 15px;
+    padding: 5px;
     border: 1px solid #ddd;
     border-radius: 0;
     font-size: 1.5em;
@@ -345,23 +351,8 @@ section h2 {
     transition: top .3s ease,opacity .3s ease;
 }
 
-.floating-label-form-group::not(:first-child) {
-    padding-left: 14px;
-    border-left: 1px solid #eee;
-}
 
-.floating-label-form-group-with-value label {
-    top: 0;
-    opacity: 1;
-}
 
-.floating-label-form-group-with-focus label {
-    color: #18bc9c;
-}
-
-form .row:first-child .floating-label-form-group {
-    border-top: 1px solid #eee;
-}
 
 footer {
     color: #fff;

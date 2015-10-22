@@ -46,7 +46,7 @@ var Hapi = require('hapi'),
                     from: 'Contact Form <kelly.c.talley@gmail.com>', // sender address
                     to: 'kelly.c.talley@gmail.com', // list of receivers
                     replyTo: name + ' <' + email + '>',
-                    subject: 'Message from' + name, // Subject line
+                    subject: 'Message from ' + name + ' at ' + email, // Subject line
                     text: message
                 };
 
